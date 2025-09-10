@@ -10,7 +10,8 @@ function Footer() {
                         <p>+998 97 500 05 01</p>
                         <p><a href="#">softium@yahoo.com</a></p>
                     </div>
-                    <div><img src="Frame 148.png" alt="" /></div>
+                    <div>
+                        <a href="https://www.linkedin.com/in/softium-solutions-78065b2b5/"><img src="Frame 148.png" alt="" /></a></div>
                 </div>
                 <div className="footer_row">
                     <p>© 2025 Cargo Calc. Все права защищены.</p>

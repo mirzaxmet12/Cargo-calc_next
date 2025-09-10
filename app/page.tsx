@@ -4,6 +4,7 @@ import Benifist from "@/compnent/benifist";
 import Contacts from "@/compnent/contacts";
 import Customer from "@/compnent/customer";
 import Demo from "@/compnent/demo";
+import DemoModal from "@/compnent/demoModal";
 import Features from "@/compnent/features";
 import Footer from "@/compnent/footer";
 import Header from "@/compnent/header";
@@ -46,6 +47,7 @@ export default function HomePage() {
             <Demo />
             <Customer />
             <Contacts />
+            <DemoModal/>
             <Footer />
         </div>
     );

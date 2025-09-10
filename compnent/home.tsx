@@ -13,7 +13,7 @@ function Home() {
                         упростить
                         учет
                         грузов, управлять тарифами и вести прозрачный расчет услуг.</p>
-                    <button className=""><a href="#demo">Попробовать сейчас</a></button>
+                    <a href="#demo">Попробовать сейчас</a>
                 </div>
                 <div className="home-media">
                     <div className="home_img">
