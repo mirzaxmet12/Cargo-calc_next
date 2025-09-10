@@ -565,12 +565,12 @@ input:focus {
   width: 90%;
   max-width: 550px;
   position: relative;
-  animation: slideUp 0.4s ease;
+  animation:  0.4s ease;
 }
 .close-btn {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 30px;
+  right: 30px;
   border: none;
   background: none;
   font-size: 20px;
@@ -597,7 +597,7 @@ input:focus {
     opacity: 1;
   }
 }
-@keyframes slideUp {
+/* @keyframes slideUp {
   from {
     transform: translateY(40px);
     opacity: 0;
@@ -606,7 +606,7 @@ input:focus {
     transform: translateY(0);
     opacity: 1;
   }
-}
+} */
 @media (min-width: 1124px) {
   .container {
     max-width: 1128px;

@@ -95,7 +95,6 @@ export default function DemoModal() {
           </button>
         </form>
 
-        {/* Alert pastdan chiqadi */}
         {alert && <div className={`alert ${alert.type}`}>{alert.text}</div>}
       </div>
     </div>
