@@ -200,8 +200,8 @@ section {
   font-size: 16px;
   margin-bottom: 30px;
 }
-.home-content button {
-}
+/* .home-content button {
+} */
 .home-content a {
   display: block;
   margin: 0 auto;
@@ -367,10 +367,17 @@ input:focus {
 #customer .card:nth-child(n + 4) {
   display: none;
 }
+/* .swiper-slide{
+  height: -webkit-fill-available;
+} */
 #customer .card {
+  min-height: 334px;
   padding: 20px;
   text-align: start;
   border-radius: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: self-end;
 }
 #customer .card img {
   width: 143px;
@@ -395,9 +402,9 @@ input:focus {
   margin-right: 10px;
 }
 #customer .card_row span img {
-  width: 100px;
-  height: 65px;
-  margin-left: -25px;
+  width: 80px;
+  height: auto;
+  margin-left: -5px;
 }
 #customer .card_row h2 {
   font-weight: 600;
@@ -409,14 +416,13 @@ input:focus {
   font-size: 13px;
   color: #0954c5;
 }
-#customer .swiper-slide:nth-child(n + 4) {
-  display: none;
-}
+
 #customer .swiper_row {
   display: flex;
   text-align: center;
   justify-content: center;
   margin-top: 70px;
+  gap: 20px;
 }
 #customer .swiper-button-next {
   position: relative;
@@ -577,16 +583,29 @@ input:focus {
   cursor: pointer;
 }
 .alert {
+  z-index: 11111;
   margin-top: 15px;
   padding: 10px;
   border-radius: 8px;
   font-weight: 600;
   color: #fff;
 }
-.alert.success {
+.bottom-alert {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #fff;
+  z-index: 2000;
+  animation: fadeInUp 0.4s ease;
+}
+.bottom-alert.success {
   background: #4caf50;
 }
-.alert.error {
+.bottom-alert.error {
   background: #f44336;
 }
 @keyframes fadeIn {
@@ -808,6 +827,11 @@ input:focus {
   .demo .form button {
     font-size: 21px;
   }
+  #customer .card {
+  min-height: 434px;
+
+  }
+
   #customer .card img {
     width: 162px;
     height: 34px;
@@ -821,9 +845,9 @@ input:focus {
     margin-right: 10px;
   }
   #customer .card_row span img {
-    width: 110px;
-    height: 75px;
-    margin-left: -25px;
+    width: 98px;
+    height: auto;
+    margin-left: -10px;
   }
   #customer .card_row h2 {
     font-size: 19px;
