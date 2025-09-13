@@ -685,6 +685,8 @@ input:focus {
   .home-content a {
     font-size: 21px;
     text-align: center;
+    width: 300px;
+    margin: 0;
   }
   .home-media {
     position: relative;
