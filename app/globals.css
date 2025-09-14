@@ -595,6 +595,7 @@ input:focus {
 }
 .modal .form{
   margin: 0;
+  width: auto;
 }
 .modal .card{
   padding: 0 10px;
