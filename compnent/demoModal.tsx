@@ -37,7 +37,7 @@ export default function DemoModal() {
             if (res.ok) {
                 setAlert({ type: "success", text: "Заявка успешно отправлена ✅" });
                 form.reset();
-                setOpen(false); 
+                setOpen(false);
             } else {
                 setAlert({ type: "error", text: "Ошибка при отправке ❌" });
             }
@@ -57,7 +57,12 @@ export default function DemoModal() {
                         <button className="close-btn" onClick={() => setOpen(false)}>
                             ✕
                         </button>
-
+                        <div className="header_logo">
+                            <img src="Frame 83.png" alt="img" />
+                            <h1 >
+                                Cargo Calc
+                            </h1>
+                        </div>
                         <h2>Опробовать демо</h2>
                         <form className="form card" onSubmit={handleSubmit}>
                             <div className="form-row">

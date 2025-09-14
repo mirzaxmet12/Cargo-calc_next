@@ -47,6 +47,9 @@ body {
   align-items: center;
   /* gap: 8px; */
 }
+.header_logo {
+  gap: 8px;
+}
 .header-bar .brand {
   color: #12233d;
   font-family: Montserrat;
@@ -566,12 +569,35 @@ input:focus {
 }
 .modal {
   background: #fff;
-  padding: 30px;
+  padding: 20px;
   border-radius: 12px;
   width: 90%;
   max-width: 550px;
   position: relative;
-  animation:  0.4s ease;
+  animation: 0.4s ease;
+}
+.modal .header_logo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  color: #12233d;
+  font-family: Montserrat;
+  font-weight: 800;
+  font-size: 18px;
+}
+.modal h2{
+  text-align: center;
+  padding-top: 20px;
+}
+.modal h1{
+  font-size: 22px;
+}
+.modal .form{
+  margin: 0;
+}
+.modal .card{
+  padding: 0 10px;
 }
 .close-btn {
   position: absolute;
@@ -830,8 +856,7 @@ input:focus {
     font-size: 21px;
   }
   #customer .card {
-  min-height: 434px;
-
+    min-height: 434px;
   }
 
   #customer .card img {
