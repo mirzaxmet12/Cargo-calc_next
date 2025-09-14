@@ -57,15 +57,15 @@ export default function DemoModal() {
                         <button className="close-btn" onClick={() => setOpen(false)}>
                             ✕
                         </button>
-                        <div className="header_logo">
+                        {/* <div className="header_logo">
                             <img src="Frame 83.png" alt="img" />
                             <h1 >
                                 Cargo Calc
                             </h1>
-                        </div>
+                        </div> */}
                         <h2>Опробовать демо</h2>
                         <form className="form card" onSubmit={handleSubmit}>
-                            <div className="form-row">
+                            <div className="form-row one">
                                 <div>
                                     <label htmlFor="fname">Имя</label>
                                     <input id="fname" name="fname" type="text" placeholder="Введите имя" required />
@@ -77,6 +77,8 @@ export default function DemoModal() {
                             </div>
 
                             <div className="form-row">
+                                <label htmlFor="company">Название компании</label>
+                                <input id="company" name="company" type="text" placeholder="Введите название компании" required />
                                 <div>
                                     <label htmlFor="email">Email</label>
                                     <input id="email" name="email" type="email" placeholder="Введите почту" required />

@@ -586,18 +586,20 @@ input:focus {
   font-weight: 800;
   font-size: 18px;
 }
-.modal h2{
-  text-align: center;
-  padding-top: 20px;
+.modal h2 {
+  /* text-align: center; */
+  padding: 20px 0;
 }
-.modal h1{
+.modal h1 {
   font-size: 22px;
 }
-.modal .form{
+.modal .form {
   margin: 0;
   width: auto;
+  /* height: auto; */
 }
-.modal .card{
+
+.modal .card {
   padding: 0 10px;
 }
 .close-btn {
@@ -969,5 +971,15 @@ input:focus {
   }
   .footer_row p {
     font-size: 18px;
+  }
+  .modal .form {
+    height: auto;
+    width: auto;
+  }
+  .modal .one {
+    justify-content: space-between;
+  }
+  .form button {
+    margin-top: 30px;
   }
 } /*# sourceMappingURL=style.css.map */
