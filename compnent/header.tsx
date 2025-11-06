@@ -23,10 +23,7 @@ function Header() {
         <header className="header">
             <div className="container header-bar">
                 <div className="header_logo">
-                    <img src="Frame 83.png" alt="img" />
-                    <a className="brand" href="#">
-                        Cargo Calc
-                    </a>
+                    <img src="Vector (1).png" alt="img" />
                 </div>
 
                 {/* Desktop nav */}
@@ -35,10 +32,9 @@ function Header() {
                     <a href="#about" onClick={(e) => handleNavClick(e, "#about")} className="nav-link">О нас</a>
                     <a href="#features" onClick={(e) => handleNavClick(e, "#features")} className="nav-link">Функционал</a>
                     <a href="#contacts" onClick={(e) => handleNavClick(e, "#contacts")} className="nav-link">Контакты</a>
-                </nav>
-
-                <div>
                     <a href="#demo" className="btn btnDemo">Получить демо</a>
+                </nav>
+                <div>
                     <input type="checkbox" name="nav-toggle" id="nav-toggle" checked={active} readOnly />
                     <label
                         htmlFor="nav-toggle"
@@ -66,11 +62,13 @@ function Header() {
                         <ul>
                             <li><a href="#home" onClick={(e) => handleNavClick(e, "#home")}>Главная</a></li>
                             <li><a href="#about" onClick={(e) => handleNavClick(e, "#about")}>О нас</a></li>
-                            <li><a href="#contacts" onClick={(e) => handleNavClick(e, "#contacts")}>Контакты</a></li>
-                            <li><a href="#features" onClick={(e) => handleNavClick(e, "#features")}>Функционал</a></li>
-                            <li><a href="#benifist" onClick={(e) => handleNavClick(e, "#benifist")}>Преимущества проет</a></li>
-                            <li><a href="#customer" onClick={(e) => handleNavClick(e, "#customer")}>Отзывы клиентов</a></li>
                             <li><a href="#demo" onClick={(e) => handleNavClick(e, "#demo")}>Демо</a></li>
+                            <li><a href="#contacts" onClick={(e) => handleNavClick(e, "#contacts")}>Контакты</a></li>
+                            {/* <li><a href="#features" onClick={(e) => handleNavClick(e, "#features")}>Функционал</a></li>
+                            <li><a href="#benifist" onClick={(e) => handleNavClick(e, "#benifist")}>Преимущества проет</a></li>
+                            <li><a href="#customer" onClick={(e) => handleNavClick(e, "#customer")}>Отзывы клиентов</a></li> */}
+                    <a href="#demo" className="btn btnDemo">Получить демо</a>
+                     
                         </ul>
                     </nav>
                 </div>

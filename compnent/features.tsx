@@ -1,67 +1,104 @@
+'use client';
 
+import React from 'react';
+import {
+    Accordion,
+    AccordionSummary,
+    AccordionDetails,
+    Typography,
+    Box,
+} from '@mui/material';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 function Features() {
+    const [expanded, setExpanded] = React.useState<string | false>(false);
+
+    const handleChange =
+        (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
+            setExpanded(isExpanded ? panel : false);
+        };
+
+    const features = [
+        'Отслеживание остатков в реальном времени',
+        'Автоматические оповещения о низких запасах',
+        'История закупок и продаж',
+        'Поддержка нескольких складов',
+        'Инвентарные отчёты',
+        'Роли и доступы сотрудников',
+        'Интеграция со сканером штрихкодов',
+    ];
 
     return (
         <section id="features">
             <div className="container features reveal">
                 <h1 className="title">Что умеет наше приложение?</h1>
                 <div className="features_card">
-                    <div className="card">
-                        <div className="features_title">
-                            <img src="users-svgrepo-com 2.png" alt="img" />
-                            <h2>Управление пользователями</h2>
-                            <img src="Frame 75.png" alt="img" />
-                        </div>
-                        <p>— Гибкая система доступа для сотрудников с разграничением прав.</p>
-                    </div>
-                    <div className="card">
-                        <div className="features_title">
-                            <img src="add-circle-svgrepo-com.png" alt="img" />
-                            <h2>Добавление услуг, товаров и тарифов</h2>
-                            <img src="Frame 75.png" alt="img" />
-                        </div>
-                        <p>— Возможность формировать собственные тарифные планы, настраивать цены и учитывать специфику
-                            разных типов грузов. </p>
-                    </div>
-                    <div className="card">
-                        <div className="features_title">
-                            <img src="Vector.png" alt="img" />
-                            <h2>Работа с организациями</h2>
-                            <img src="Frame 75.png" alt="img" />
-                        </div>
-                        <p>— Добавление и управление клиентами, партнерами и поставщиками в удобном интерфейсе. </p>
-                    </div>
-                    <div className="card">
-                        <div className="features_title">
-                            <img src="diagram-svgrepo-com.png" alt="images"/>
-                                <h2>Дашборд и аналитика</h2>
-                                <img src="Frame 75.png" alt="img" />
-                        </div>
-                        <p>— Визуализация ключевых показателей: количество заявок, доходность, загруженность склада и
-                            другие
-                            важные метрики.</p>
-                    </div>
-                    <div className="card">
-                        <div className="features_title">
-                            <img src="archive-svgrepo-com.png" alt="img" />
-                            <h2>Работа с заявками и архив заявок</h2>
-                            <img src="Frame 75.png" alt="img" />
-                        </div>
-                        <p>— Удобный учет всех обработанных и текущих заявок, поиск и фильтрация по ключевым параметрам.
-                        </p>
-                    </div>
-                    <div className="card">
-                        <div className="features_title">
-                            <img src="export-svgrepo-com.png" alt="img" />
-                            <h2>Экспорт данных</h2>
-                            <img src="Frame 75.png" alt="img" />
-                        </div>
-                        <p>— Выгрузка отчетов в Excel для удобной работы с финансами и аналитикой. </p>
-                        <p>— Формирование актов с возможностью экспорта в Excel, что облегчает...</p>
-                    </div>
+                    {features.map((title, index) => {
+                        const isOpen = expanded === `panel${index}`;
+
+                        return (
+                        <Box  key={index} sx={{
+                            mb: 1,
+                            boxShadow: ' 0px 5px 0px 0px #5A1490',
+                            border: '1.5px solid #5A1490',
+                            borderRadius: '24px',
+                            overflow: 'hidden',
+
+                        }}>
+                            <Accordion
+                                key={index}
+                                expanded={expanded === `panel${index}`}
+                                onChange={handleChange(`panel${index}`)}
+                            >
+                                <AccordionSummary >
+                                    <Box sx={{
+                                        display: 'flex',
+                                        width: '100%',
+                                        justifyContent: 'space-between',
+
+                                    }} >
+                                        <Typography sx={{
+                                             whiteSpace: 'nowrap',    
+                                             overflow: 'hidden',      
+                                             textOverflow: 'ellipsis', 
+                                             width:'80%',
+                                             display: 'block', 
+                                            fontWeight: '800',
+                                            fontSize:{ sx:'21px',md:'24px'},
+                                        }}>{title}</Typography>
+                                        <Typography sx={{
+                                            
+                                            background: '#5A1490',
+                                            fontSize: '24px',
+                                            height: '32px',
+                                            padding:'4px',
+                                            width: '32px',
+                                            color: '#fff',
+                                            borderRadius: '50%',
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            justifyContent: 'center'
+
+
+                                        }}><img src={isOpen ? 'minus.png' : 'add.png'} alt="" /></Typography></Box>
+                                </AccordionSummary>
+                                <AccordionDetails>
+                                    <Typography variant="body2" sx={{
+                                        fontWeight: '400',
+                                        fontSize: { sx:'18px',md:'21px'},
+                                        textAlign: 'left',
+                                        padding:'10px',
+                                    }}>
+                                        Это функция, которая позволяет видеть актуальное количество товаров
+                                        на складе или в магазине в каждый момент времени, без задержек и
+                                        ручных обновлений.
+                                    </Typography>
+                                </AccordionDetails>
+                            </Accordion>
+                        </Box>)
+                    })}
                 </div>
             </div>
-        </section>
+        </section >
     )
 }
 

@@ -39,7 +39,6 @@ console.log(res);
       setAlert({ type: "error", text: "Сервер недоступен ❌" });
     } finally {
       setLoading(false);
-      // 3 soniyadan keyin alertni yopamiz
       setTimeout(() => setAlert(null), 3000);
     }
   };
@@ -47,30 +46,39 @@ console.log(res);
   return (
     <section id="demo">
       <div className="container demo reveal">
-        <h1 className="title">Опробовать демо</h1>
+        <h1 className="title">Хотите опробовать демо?</h1>
         <div className="demo-card">
           <div className="demo-info">
-            <h1>Попробуйте сами — это удобно!</h1>
+            <h1>Попробуйте <span>Smart-Sawda</span> в действии — без обязательств и оплаты</h1>
             <p>
-              Никаких рисков: просто оставьте заявку и получите доступ к
-              демо-версии.
+            <img src="Search.png" alt="img" />
+            Проведите тестовый учёт товара
             </p>
-            <p>Оцените, как легко автоматизировать работу склада.</p>
+            <p>
+            <img src="Grid Four 02.png" alt="img" />
+            Cистема показывает остатки в реальном времени</p>
+            <p>
+            <img src="Shape.png" alt="img" />
+            Сформируйте пробный отчёт и оцените аналитику</p>
           </div>
 
           <form className="form card" onSubmit={handleSubmit}>
-            <div className="form-row one">
+            {/* <div className="form-row one">
               <div>
-                <label htmlFor="fname">Имя</label>
-                <input id="fname" name="fname" type="text" placeholder="Введите имя" required />
+                <label htmlFor="fname">Имя и фамилия</label>
+                <input id="fname" name="fname" type="text" placeholder="Введите имя и фамилию" required />
               </div>
               <div>
                 <label htmlFor="lname">Фамилия</label>
                 <input id="lname" name="lname" type="text" placeholder="Введите фамилию" required />
               </div>
-            </div>
+            </div> */}
 
             <div className="form-row">
+            <div>
+                <label htmlFor="fname">Имя и фамилия</label>
+                <input id="fname" name="fname" type="text" placeholder="Введите имя и фамилию" required />
+              </div>
               <div>
                 <label htmlFor="company">Название компании</label>
                 <input id="company" name="company" type="text" placeholder="Введите название компании" required />

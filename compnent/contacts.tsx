@@ -25,17 +25,17 @@ function Contacts() {
                     </div>
                     <div className="contacts_icon">
                         <span>
-                            <img src="Frame 135.png" alt="img" />
+                            <img src="Frame 135 (1).png" alt="img" />
                         </span>
                         <span>
-                            <img src="Frame 134 (1).png" alt="img" />
+                            <img src="Frame 136.png" alt="img" />
                         </span>
                         <span>
-                            <img src="Frame 133.png" alt="img" />
+                            <img src="Frame 137.png" alt="img" />
                         </span>
                     </div>
-                    <img src="_.png" alt="img" className="image" />
-                    <img src="_ (2).png" alt="img" className="image1" />
+                    
+                    <img src="_ (3).png" alt="img" className="image" />
                 </div>
             </div>
         </section>
