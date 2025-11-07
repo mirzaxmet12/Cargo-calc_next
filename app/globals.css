@@ -325,8 +325,8 @@ margin-bottom: 32px;
   margin-top: 24px;
 }
 .benifist_card .card {
-  padding: 24px;
-  width: 174px;
+  padding:12px 24px;
+  width: 154px;
   /* max-width: 184px; */
   border: 1.5px solid #5a1490;
   margin: 0;
@@ -733,6 +733,12 @@ input:focus {
     opacity: 1;
   }
 } */
+@media (min-width: 768px) {
+  .benifist_card .card {
+    width: 184px;
+    padding: 24px;
+  }
+}
 @media (min-width: 1124px) {
   section {
     margin-top: 96px;
