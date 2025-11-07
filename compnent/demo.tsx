@@ -62,7 +62,9 @@ console.log(res);
             Сформируйте пробный отчёт и оцените аналитику</p>
           </div>
 
-          <form className="form card" onSubmit={handleSubmit}>
+          <form className="form card" 
+          // onSubmit={handleSubmit}
+          >
             {/* <div className="form-row one">
               <div>
                 <label htmlFor="fname">Имя и фамилия</label>

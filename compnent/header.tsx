@@ -7,7 +7,7 @@ function Header() {
     // 🔹 Smooth scroll 
     useEffect(() => {
         document.documentElement.style.scrollBehavior = "smooth";
-    }, []);
+    }, [active]);
 
     // 🔹 Nav link 
     const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, id: string) => {

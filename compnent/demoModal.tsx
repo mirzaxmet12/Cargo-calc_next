@@ -57,15 +57,11 @@ export default function DemoModal() {
                         <button className="close-btn" onClick={() => setOpen(false)}>
                             ✕
                         </button>
-                        {/* <div className="header_logo">
-                            <img src="Frame 83.png" alt="img" />
-                            <h1 >
-                                Cargo Calc
-                            </h1>
-                        </div> */}
                         <h2>Опробовать демо</h2>
-                        <form className="form card" onSubmit={handleSubmit}>
-                            <div className="form-row one">
+                        <form className="form card" 
+                        // onSubmit={handleSubmit}
+                        >
+                            {/* <div className="form-row one">
                                 <div>
                                     <label htmlFor="fname">Имя</label>
                                     <input id="fname" name="fname" type="text" placeholder="Введите имя" required />
@@ -74,9 +70,13 @@ export default function DemoModal() {
                                     <label htmlFor="lname">Фамилия</label>
                                     <input id="lname" name="lname" type="text" placeholder="Введите фамилию" required />
                                 </div>
-                            </div>
+                            </div> */}
 
                             <div className="form-row">
+                                <div>
+                                    <label htmlFor="fname">Имя и фамилия</label>
+                                    <input id="fname" name="fname" type="text" placeholder="Введите имя и фамилию" required />
+                                </div>
                                 <label htmlFor="company">Название компании</label>
                                 <input id="company" name="company" type="text" placeholder="Введите название компании" required />
                                 <div>
@@ -106,7 +106,7 @@ export default function DemoModal() {
                 </div>
             )}
 
-            {/* Pastdan chiqadigan alert */}
+ 
             {alert && (
                 <div className={`bottom-alert ${alert.type}`}>
                     {alert.text}

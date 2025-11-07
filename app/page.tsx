@@ -47,7 +47,7 @@ export default function HomePage() {
             <Demo />
             <Customer />
             <Contacts />
-             <DemoModal/> 
+            <DemoModal />
             <Footer />
         </div>
     );
